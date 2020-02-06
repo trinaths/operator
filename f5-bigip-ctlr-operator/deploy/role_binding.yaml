@@ -1,0 +1,11 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: f5-bigip-ctlr-operator
+subjects:
+- kind: ServiceAccount
+  name: f5-bigip-ctlr-operator
+roleRef:
+  kind: Role
+  name: f5-bigip-ctlr-operator
+  apiGroup: rbac.authorization.k8s.io

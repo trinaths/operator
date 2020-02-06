@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorSource
+metadata:
+  name: f5-bigip-ctlr-operator
+spec:
+  type: appregistry
+  endpoint: https://quay.io/cnr
+  registryNamespace: trinathsquay
+  displayName: F5 BIG-IP Operators
+  publisher: F5 Networks
