@@ -2,6 +2,7 @@ apiVersion: operators.coreos.com/v1
 kind: OperatorSource
 metadata:
   name: f5-bigip-ctlr-operator
+  namespace: openshift-marketplace
 spec:
   type: appregistry
   endpoint: https://quay.io/cnr

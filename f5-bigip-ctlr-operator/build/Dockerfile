@@ -5,8 +5,8 @@ LABEL name="F5 BIG-IP Controller Operator" \
       vendor="F5 Networks Inc" \
       version="v1.0.0" \
       release="1" \
-      summary="This is an example of a wordpress helm operator." \
-      description="This operator will deploy wordpress to the cluster."
+      summary="F5 BIG-IP Controller Operator" \
+      description="This operator will deploy F5 Controller Ingress Services to the cluster."
 
 # Required Licenses
 COPY licenses /licenses

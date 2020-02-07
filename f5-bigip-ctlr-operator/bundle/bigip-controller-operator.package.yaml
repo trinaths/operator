@@ -1,4 +1,0 @@
-packageName: f5-bigip-ctlr-operator
-channels:
-  - name: alpha
-    currentCSV: bigip-controller-operator.v1.0.0
