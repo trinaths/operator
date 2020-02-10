@@ -102,8 +102,16 @@ spec:
             kind: Secret
           - version: v1
             kind: ConfigMap
-        specDescriptors: []
-        statusDescriptors: []
+        specDescriptors:
+        - description: Version is a read-only field. It contains the current version of F5 BIG-IP Controller.
+          displayName: Version
+          path: version
+        statusDescriptors:
+        - path: phase
+          displayName: Status
+          description: Status of the F5 BIG-IP Controller.
+          x-descriptors:
+          - 'urn:alm:descriptor:io.kubernetes.phase'
     required: []
   install:
     strategy: deployment
