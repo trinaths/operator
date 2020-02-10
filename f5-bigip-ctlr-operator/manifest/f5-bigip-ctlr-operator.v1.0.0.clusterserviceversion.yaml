@@ -10,32 +10,30 @@ metadata:
     certified: 'false'
     createdAt: '2020-02-07'
     description: >-
-      F5 BIGIP Controller Operator to install F5 Container Ingress Services
+      Operator to install F5 Container Ingress Services (CIS)
       Controller for BIG-IP.
     containerImage: 'quay.io/trinathsquay/f5-bigip-ctlr-operator:v1.0.0'
     support: 'F5 CIS Support <t.somanchi@f5.com>'
     capabilities: Basic Install
     repository: 'https://github.com/F5Networks/charts'
 spec:
-  displayName: 'F5 BIGIP Controller'
+  displayName: 'F5 BIG-IP Controller'
   description: >
-    ## F5 Container Ingress Services
+    ## Introduction
+
+    This Operator installs F5 Container Ingress Services (CIS)  for BIG-IP in
+    your Cluster. This enables to configure and deploy CIS using Helm Charts.
+
+    ## F5 Container Ingress Services for BIG-IP
 
     F5 Container Ingress Services (CIS) integrates with container orchestration
     environments to dynamically create L4/L7 services on F5 BIG-IP systems, and
     load balance network traffic across the services. 
 
-    Monitoring the orchstration API server, CIS is able to modify the BIG-IP
+    Monitoring the orchestration API server, CIS is able to modify the BIG-IP
     system configuration based on changes made to containerized applications.
 
-    ## F5 BIGIP Controller Operator
-
-
-    This Operator installs F5 Container Ingress Services (CIS)  for BIG-IP in
-    your Cluster. This enables to configure and deploy CIS using Helm Charts.
-
     ## Prerequisites 
-
 
     Create BIG-IP login credentials for use with Operator Helm charts. A basic
     way be, 
@@ -47,17 +45,17 @@ spec:
     --from-literal=username=<USERNAME>  --from-literal=password=<PASSWORD>
 
     ```
-  maturity: stable
+  maturity: beta
   version: 1.0.0
   replaces: ''
   minKubeVersion: 1.13.0
   keywords:
-    - 'Ingress Controller '
+    - Ingress Controller
     - BIGIP
     - F5
     - container
     - router
-    - 'application '
+    - application
     - delivery
     - controller
     - waf
@@ -87,7 +85,7 @@ spec:
         kind: F5BigIpCtlr
         version: v1
         description: >-
-          This CRD provides kind F5BigIpCtlr to configure and deploy F5 BIG-IP
+          This CRD provides kind `F5BigIpCtlr` to configure and deploy F5 BIG-IP
           Controller.
         resources:
           - version: v1
@@ -103,13 +101,13 @@ spec:
           - version: v1
             kind: ConfigMap
         specDescriptors:
-        - description: Version is a read-only field. It contains the current version of F5 BIG-IP Controller.
+        - description: Version is a read-only field. It contains the current version of F5 BIG-IP Controller Operator.
           displayName: Version
           path: version
         statusDescriptors:
         - path: phase
           displayName: Status
-          description: Status of the F5 BIG-IP Controller.
+          description: Status of the F5 BIG-IP Controller Operator.
           x-descriptors:
           - 'urn:alm:descriptor:io.kubernetes.phase'
     required: []
