@@ -13,7 +13,7 @@ metadata:
       Operator to install F5 Container Ingress Services (CIS)
       Controller for BIG-IP.
     containerImage: 'quay.io/trinathsquay/f5-bigip-ctlr-operator:v1.0.0'
-    support: 'F5 CIS Support <t.somanchi@f5.com>'
+    support: F5 Operators Team <f5_cis_operators@f5.com>
     capabilities: Basic Install
     repository: 'https://github.com/F5Networks/charts'
 spec:
@@ -62,8 +62,8 @@ spec:
     - firewall
     - loadbalancer
   maintainers:
-    - name: F5 CIS Team
-      email: t.somanchi@f5.com
+    - name: F5 Operators Team
+      email: f5_cis_operators@f5.com
   provider:
     name: F5 Networks Inc.
   labels: {}
