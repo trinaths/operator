@@ -16,7 +16,7 @@ spec:
       containers:
         - name: f5-bigip-ctlr-operator
           # Replace this with the built image name
-          image: quay.io/trinathsquay/f5-cis-operator:v1.0.0
+          image: registry.connect.redhat.com/f5networks/k8s-bigip-ctlr-operator
           imagePullPolicy: Always
           env:
             - name: WATCH_NAMESPACE
